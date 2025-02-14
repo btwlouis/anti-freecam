@@ -1,0 +1,5 @@
+RegisterNetEvent("freecam:capture", function(webhook)
+	exports['screenshot-basic']:requestScreenshotUpload(webhook, 'files[]', function(data)
+		TriggerLatentServerEvent("freecam:recievedScreenshot", 100000, data)
+	end)
+end)
