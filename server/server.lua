@@ -41,7 +41,7 @@ end
 
 CreateThread(function()
     while true do 
-        Wait(1000) 
+        Wait(Config.RefreshRate) 
 
         for _, playerId in pairs(GetPlayers()) do 
             checkPlayer(playerId)
